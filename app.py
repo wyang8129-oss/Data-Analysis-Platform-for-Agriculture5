@@ -16,14 +16,6 @@ from sklearn.inspection import PartialDependenceDisplay
 import matplotlib
 import platform
 
-import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
-
-font_path = ".streamlit/fonts/NanumGothic.ttf"
-fm.fontManager.addfont(font_path)
-
-plt.rc('font', family='NanumGothic')
-
 
 # --- 한글 폰트 설정 ---
 if platform.system() == 'Windows':
@@ -665,4 +657,5 @@ if sensor_file and yield_file:
             plt.close(fig_ale)
         except Exception as e:
             st.error(f"ALE 계산/시각화 오류: {e}")
+
 
